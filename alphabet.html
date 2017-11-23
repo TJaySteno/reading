@@ -5,21 +5,27 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="./css/main.css">
 	</head>
-	<header>
-		<h1 class="main-title">Let's Learn to Read!</h1>
-		<div class="links">
+		<h1 class="main-title">Let's Learn to Read</h1>
+		<div class="topnav" id="myTopnav">
 			<a href="./index.html">Home</a>
+			<a href="#top" class="active">Alphabet Soup</a>
+		  <a href="#top">Thing #3</a>
+		  <a href="./about.html">About</a>
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 		</div>
 	</header>
 	<body>
-		<div class="content">
-			<h2>Let's Learn Letters!</h2>
-			<img src="./images/a.jpg" alt="Admiral Ackbar">
-			<h3>A is for Ackbar!</h3>
-			<button type="button" class="content-button">Next</button>
+		<div id="content">
+			<h2 class="content-title">Let's Learn Letters!</h2>
+			<h3 class="alphabet-text">Pick where you want to start</h3>
+			<button type="button" class="alphabet-button yellow" value="A">A</button>
+			<button type="button" class="alphabet-button yellow" value="H">H</button><br>
+			<button type="button" class="alphabet-button yellow" value="M">M</button>
+			<button type="button" class="alphabet-button yellow" value="S">S</button>
 		</div>
 	</body>
 	<footer>
-		<h5 class="footnote">For Ethan and Nathaniel from Tio Trent!</h5>
+		<h5 class="footnote">For Ethan and Nathaniel from Tio Trent</h5>
 	</footer>
+	<script src="js/alphabet.js"></script>
 </html>
