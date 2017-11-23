@@ -68,7 +68,7 @@ function setColor (c, div) {
 
 			// Create and render new elements
 			const img = document.createElement('img');
-			img.src = `./images/${e.target.value}.jpg`;
+			img.src = `./images/${e.target.value.toLowerCase()}.jpg`;
 			img.alt = letter.name;
 			img.className = 'alphabet-image';
 			content.insertBefore(img, children[1]);
@@ -83,11 +83,11 @@ function setColor (c, div) {
 			button.addEventListener('click', function () {
 				const div = document.getElementById('content');
 				const alphabetImage = content.querySelector('.alphabet-image');
-				const oldLetter = alphabetImage.src.split('images/')[1].split('.')[0];
+				const oldLetter = alphabetImage.src.split('images/')[1].split('.')[0].toUpperCase();
 				let newLetter;
 				if ( !oldLetter || oldLetter === 'Z' ) newLetter = 'A';
 					else newLetter = String.fromCharCode( oldLetter.charCodeAt() + 1 );
-				alphabetImage.src=`./images/${newLetter}.jpg`;
+				alphabetImage.src=`./images/${newLetter.toLowerCase()}.jpg`;
 				updateText(newLetter, nameInfo[newLetter], div);
 			});
 
