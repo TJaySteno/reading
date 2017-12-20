@@ -8,10 +8,7 @@ function myFunction() {
   }
 }
 
-
-
 /*****     HTML ELEMENTS     *****/
-// INDEX
 
 // ALPHABET SOUP
 const nameInfo = {
@@ -59,7 +56,6 @@ document.querySelector('.alphabet-button')
 		updateText(newLetter.toUpperCase());
 });
 
-
 function updateText (letter) {
 	const name = nameInfo[letter].split(' ');
 	let html = `<span class="text-decoration">${letter}</span> is for`;
@@ -70,5 +66,3 @@ function updateText (letter) {
 	document.querySelector('.alphabet-text').innerHTML = html;
 	document.querySelectorAll('.text-decoration').style = 'text-shadow: 0 -2px 5px #bf40bf';
 }
-
-// ABOUT

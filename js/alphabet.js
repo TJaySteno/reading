@@ -50,39 +50,43 @@ const nameInfo = {
 }
 
 function setColor (c, div) {
-	if (!div) { const div = document.getElementById('content') };
-	const colors = {purple:'bf40bf', blue:'0000cc', green:'00ff00', yellow:'ffff00', orange:'ff6600', red:'ff0000', white: 'fff'};
-	div.querySelectorAll('.text-decoration').forEach( function (curr) { curr.style = `text-shadow: 0 -2px 5px #${colors[c]}` });
+	if (!div) { const div = document.getElementById('alphabet') };
+	// const colors = {purple:'bf40bf', blue:'0000cc', green:'00ff00', yellow:'ffff00', orange:'ff6600', red:'ff0000', white: 'fff'};
+	div.querySelectorAll('.text-decoration')
+    .forEach( function (curr) {
+      curr.style = `text-shadow: 0 0 2px grey, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px ${c}, 0 0 25px ${c};`
+  });
 }
 
 (function () {
-	const content = document.getElementById('content');
-	content.querySelectorAll('button')
+	const alphabet = document.getElementById('alphabet');
+	alphabet.querySelectorAll('button')
 		.forEach( function (curr) { curr.addEventListener( 'click', function (e) {
 
 			// Store letter and remove content
 			let letter = nameInfo[e.target.value];
-			let children = content.childNodes;
+			let children = alphabet.childNodes;
 			for (let i = children.length; i > 0; --i) {
-				if ( i != 2 && i != 4 ) { content.removeChild(children[i-1]) } };
+        // Remove all elements besides title and
+				if ( i != 2 && i != 4 ) { alphabet.removeChild(children[i-1]) } };
 
 			// Create and render new elements
 			const img = document.createElement('img');
 			img.src = `./images/${e.target.value.toLowerCase()}.jpg`;
 			img.alt = letter.name;
 			img.className = 'alphabet-image';
-			content.insertBefore(img, children[1]);
+			alphabet.insertBefore(img, children[1]);
 
 			const button = document.createElement('button');
 			button.type = 'button';
 			button.className = 'alphabet-button yellow';
 			button.textContent = 'Next!';
-			content.appendChild(button);
+			alphabet.appendChild(button);
 
       // Add listener for button
 			button.addEventListener('click', function () {
-				const div = document.getElementById('content');
-				const alphabetImage = content.querySelector('.alphabet-image');
+				const div = document.getElementById('alphabet');
+				const alphabetImage = div.querySelector('.alphabet-image');
 				const oldLetter = alphabetImage.src.split('images/')[1].split('.')[0].toUpperCase();
 				let newLetter;
 				if ( !oldLetter || oldLetter === 'Z' ) newLetter = 'A';
@@ -90,8 +94,7 @@ function setColor (c, div) {
 				alphabetImage.src=`./images/${newLetter.toLowerCase()}.jpg`;
 				updateText(newLetter, nameInfo[newLetter], div);
 			});
-
-			updateText(e.target.value, letter, content);
+			updateText(e.target.value, letter, alphabet);
 		})
 	});
 })()

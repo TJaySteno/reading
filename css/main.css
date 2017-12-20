@@ -1,56 +1,62 @@
 /*****     COLOR SETS     *****/
 .red-lightest { background-color: #ffb3b3 }
-.red-lighter { background-color: #ff4d4d }
-.red { background-color: #ff0000 }
-.red-darker { background-color: #b30000 }
-.red-darkest { background-color: #4d0000 }
+.red-lighter 	{ background-color: #ff4d4d }
+.red 					{ background-color: #ff0000 }
+.red-darker 	{ background-color: #b30000 }
+.red-darkest 	{ background-color: #4d0000 }
 
-.yellow-lightest { background-color: #ffffb3 }
-.yellow-lighter { background-color: #ffff4d }
-.yellow { background-color: #ffff00 }
-.yellow-darker { background-color: #b3b300 }
-.yellow-darkest { background-color: #4d4d00 }
+.yellow-lightest 	{ background-color: #fff19b }
+.yellow-lighter 	{ background-color: #ffe549 }
+.yellow 					{ background-color: #ffdc00 }
+.yellow-darker 		{ background-color: #dbbd00 }
+.yellow-darkest 	{ background-color: #9b8600 }
 
 .green-lightest { background-color: #b3ffb3 }
-.green-lighter { background-color: #4dff4d }
-.green { background-color: #00ff00 }
-.green-darker { background-color: #00b300 }
-.green-darkest { background-color: #004d00 }
+.green-lighter 	{ background-color: #4dff4d }
+.green 					{ background-color: #00ff00 }
+.green-darker 	{ background-color: #00b300 }
+.green-darkest 	{ background-color: #004d00 }
 
-.blue-lightest { background-color: #b3b3ff }
-.blue-lighter { background-color: #6666ff }
-.blue { background-color: #0000cc }
-.blue-darker { background-color: #000099 }
-.blue-darkest { background-color: #00004d }
+.blue-lightest 	{ background-color: #b3b3ff }
+.blue-lighter 	{ background-color: #6666ff }
+.blue 					{ background-color: #0000cc }
+.blue-darker 		{ background-color: #000099 }
+.blue-darkest 	{ background-color: #00004d }
 
-.purple-lightest { background-color: #ecc6ec }
-.purple-lighter { background-color: #d279d2 }
-.purple { background-color: #bf40bf }
-.purple-darker { background-color: #862d86 }
-.purple-darkest { background-color: #391339 }
+.purple-lightest 	{ background-color: #ecc6ec }
+.purple-lighter 	{ background-color: #d279d2 }
+.purple 					{ background-color: #bf40bf }
+.purple-darker 		{ background-color: #862d86 }
+.purple-darkest 	{ background-color: #391339 }
 
-.grey-lightest { background-color: #d9d9d9 }
-.grey-lighter { background-color: #a6a6a6 }
-.grey { background-color: #808080 }
-.grey-darker { background-color: #595959 }
-.grey-darkest { background-color: #262626 }
+.grey-lightest 	{ background-color: #d9d9d9 }
+.grey-lighter 	{ background-color: #a6a6a6 }
+.grey 					{ background-color: #808080 }
+.grey-darker 		{ background-color: #595959 }
+.grey-darkest 	{ background-color: #262626 }
 
 
 
 /*****     GENERAL     *****/
 body {
 	background-color: #262626;
-	background-image: linear-gradient(to top, #595959, #262626);
+	background-image: url("../images/stars.jpg");
+	color: yellow;
 	font-family: Helvetica, Arial, sans-serif;
 	text-align: center;
 	padding: 0;
 	margin: 0;
 }
 
+a {
+	color: yellow;
+}
+
 .main-title {
-	text-shadow: .05em .05em .05em black;
-	font-size: 2.5em;
-	width: 100%;
+	background: #fff;
+	box-shadow:0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px blue,0 0 25px blue;
+	z-index:5;
+	color: black;
 	margin: 0;
 }
 
@@ -60,12 +66,12 @@ body {
 }
 
 .topnav a {
-  float: left;
-  display: block;
+  float: center;
+  display: inline-block;
 	font-weight: bold;
   text-align: center;
+	text-decoration: none;
   padding: 14px 16px;
-  text-decoration: none;
   font-size: 17px;
 }
 
@@ -84,48 +90,92 @@ body {
   display: none;
 }
 
-#content {
-	border-radius: 30px 5px;
+.content {
+	border-radius: 30px;
 	padding: 5px;
 	margin: auto;
 	width: 90%;
+	max-width: 600px;
+	box-sizing: border-box;
 }
 
 .content-title {
 	text-shadow: 3px 3px 3px #444;
 }
 
+.break {
+	width: 100%;
+}
+
+.content {
+	border-radius: 5px;
+	background-color: white;
+	box-shadow:0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px blue,0 0 25px blue;
+	box-sizing: border-box;
+
+	color: black;
+	line-height: 1.5rem;
+	text-align: left;
+
+	padding: 1rem 2rem;
+	margin: auto;
+	width: 90%;
+	max-width: 600px;
+}
+
+.content h2 {
+	text-align: center;
+}
+
+.content a {
+	color: green;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.content ul {
+	list-style-type: square;
+}
+
+
+
+/*****     ABOUT     *****/
+
 
 
 /*****     ALPHABET SOUP     *****/
+
 .alphabet-image {
-	border-radius: 30px 3px;
-	box-shadow: 0 1em .4em -.4em black;
+	border-radius: 20px;
+	box-shadow: 0 2rem 1.5rem -1.5rem black;
 	max-width: 100%;
+	max-height: 100%;
+}
+
+.alphabet-text {
+	font-size: 1.5rem;
+	color: white;
+	letter-spacing: 3px;
+}
+
+.text-decoration {
+	font-size: 2rem;
 }
 
 .alphabet-button {
-	border-radius: 20px 3px;
-	margin: 4px;
+	border-radius: 50%;
+	padding: 0;
+	margin: .1rem .25rem;
 	outline: none;
+	font-size: 3rem;
 	font-weight: bold;
-	height: 3em;
-	width: 10em;
+	height: 7rem;
+	width: 10rem;
 }
 
 .alphabet-button:active {
 	border: 2px inset translucent;
 }
-
-.text-decoration {
-	font-size: 2em;
-}
-
-.letter-example {
-	font-size: 2em;
-}
-
-
 
 
 
@@ -156,12 +206,18 @@ body {
 .links a {
 	box-sizing: border-box;
 	border: 1px solid black;
-	border-radius: .5em .1em;
-	padding: .25em;
+	border-radius: .5rem .1rem;
+	padding: .25rem;
 	height: 100%;
 }
 
 .footnote {
-	padding-right: 2em;
-	text-align: right;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow:0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px green,0 0 25px green;
+	color: black;
+	padding: 2px 5px;
+	margin-right: 2rem;
+	float: right;
+	width: max-content;
 }
