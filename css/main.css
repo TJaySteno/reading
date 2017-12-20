@@ -91,12 +91,20 @@ a {
 }
 
 .content {
-	border-radius: 30px;
-	padding: 5px;
+	/* Lightsaber effect */
+	border-radius: 5px;
+	background-color: white;
+	box-shadow:0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px blue,0 0 25px blue;
+	box-sizing: border-box;
+
+	/* Adjust text */
+	color: black;
+
+	/* Spacing and sizing */
+	padding: 1rem 2rem;
 	margin: auto;
 	width: 90%;
 	max-width: 600px;
-	box-sizing: border-box;
 }
 
 .content-title {
@@ -107,39 +115,28 @@ a {
 	width: 100%;
 }
 
-.content {
-	border-radius: 5px;
-	background-color: white;
-	box-shadow:0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px blue,0 0 25px blue;
-	box-sizing: border-box;
 
-	color: black;
+
+/*****     HOME     *****/
+
+#home {
 	line-height: 1.5rem;
 	text-align: left;
-
-	padding: 1rem 2rem;
-	margin: auto;
-	width: 90%;
-	max-width: 600px;
 }
 
-.content h2 {
+#home h2 {
 	text-align: center;
 }
 
-.content a {
+#home a {
 	color: green;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-.content ul {
+#home ul {
 	list-style-type: square;
 }
-
-
-
-/*****     ABOUT     *****/
 
 
 
