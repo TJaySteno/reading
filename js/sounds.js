@@ -18,7 +18,7 @@ const button = image.parentNode.nextElementSibling.nextElementSibling;
 
 // Advance page on button click, enter, spacebar, or right arrow
 button.addEventListener('click', advancePage);
-document.body.onkeyup = function(e){
+document.body.onkeyup = function(e) {
   if( e.keyCode == 32 || e.keyCode == 13 || e.keyCode == '39' ) { advancePage } }
 
 let i = 0; // Iterator that will track progress through 'words' array
