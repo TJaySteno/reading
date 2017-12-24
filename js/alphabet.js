@@ -57,8 +57,9 @@ function loadNextLetter (b) {
       else newLetter = String.fromCharCode( currentLetter.charCodeAt() + 1 ); }
 
   // Update page with new values
-  alphabetImage.src=`./images/${newLetter.toLowerCase()}.jpg`;
-  updateText(newLetter, nameInfo[newLetter], div);
+  alphabetImage.src = `./images/${newLetter.toLowerCase()}.jpg`;
+	alphabetImage.alt = nameInfo[newLetter].name;
+	updateText(newLetter, nameInfo[newLetter], div);
 }
 
 
