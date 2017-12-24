@@ -186,6 +186,8 @@ a {
 /*****     SOUND IT OUT!     *****/
 
 .sounds-image {
+	border-radius: 20px;
+
 	margin: 0;
 	position: absolute;
 	top: 50%;
