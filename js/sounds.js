@@ -4,22 +4,22 @@
 
 // Create array of words
 const words = [
-  'VAN', 'DAD', 'CAR', 'BAY',
-  'SET', 'BET', 'LET', 'GET',
-  'FIX', 'HIT', 'KID', 'PIG',
-  'MOM', 'FOX', 'WON', 'ROW',
-  'RUG', 'BUG', 'HUT'
-];
+  'CAT', 'VAN', 'DAD', 'CAR', 'APE', 'PAY',
+  'PET', 'ELF', 'BEE', 'EMU',
+  'HIT', 'KID', 'PIG', 'ICE', 'PIE',
+  'MOM', 'FOX', 'DOG', 'ROW', 'OIL',
+  'BUG', 'HUT', 'CUB', 'SUN'
+]
 
 // Find and store HTML nodes for later
 const image = document.querySelector('img');
-const word = image.nextElementSibling.lastElementChild;
-const button = image.nextElementSibling.nextElementSibling;
+const word = image.parentNode.nextElementSibling.lastElementChild;
+const button = image.parentNode.nextElementSibling.nextElementSibling;
 
-// Advance page on button click, enter, or spacebar
+// Advance page on button click, enter, spacebar, or right arrow
 button.addEventListener('click', advancePage);
 document.body.onkeyup = function(e){
-  if( e.keyCode == 32 || e.keyCode == 13 ) { advancePage } }
+  if( e.keyCode == 32 || e.keyCode == 13 || e.keyCode == '39' ) { advancePage } }
 
 let i = 0; // Iterator that will track progress through 'words' array
 let lowerCase = true; // Var that will cycle through upper/lower cases
@@ -28,7 +28,7 @@ let lowerCase = true; // Var that will cycle through upper/lower cases
 function advancePage () {
   if ( button.textContent === 'Guess' ) {
     // If button says 'guess', display pic of current word
-    image.src = `./images/e.jpg`;
+    image.src = `./images/${word.textContent.toLowerCase()}.jpg`;
     button.textContent = 'Next!';
   } else {
     // Otherwise, display next word to guess
