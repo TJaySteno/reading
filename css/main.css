@@ -176,6 +176,36 @@ a {
 
 
 
+/*****     SOUND IT OUT!     *****/
+
+.sounds-image {
+	margin: 30px;
+	height: 400px;
+	max-width: 400px;
+}
+
+.sounds-word {
+	font-size: 3rem;
+	letter-spacing: .5rem;
+}
+
+.sounds-vowel {
+	color: red;
+}
+
+.sounds-button {
+	background-color: yellow;
+	border-radius: 50%;
+	margin: 30px;
+	outline: none;
+	font-size: 3rem;
+	font-weight: bold;
+	height: 7rem;
+	width: 10rem;
+}
+
+
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav a:not(.active) {display: none;}
