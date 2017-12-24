@@ -111,6 +111,13 @@ a {
 	text-shadow: 3px 3px 3px #444;
 }
 
+.image-container {
+  position: relative;
+	margin: 30px auto;
+	height: 400px;
+	width: 400px;
+}
+
 .break {
 	width: 100%;
 }
@@ -179,9 +186,14 @@ a {
 /*****     SOUND IT OUT!     *****/
 
 .sounds-image {
-	margin: 30px;
-	height: 400px;
-	max-width: 400px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	max-height: 100%;
+	max-width: 100%;
 }
 
 .sounds-word {
